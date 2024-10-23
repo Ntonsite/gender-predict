@@ -1,8 +1,6 @@
 services:
   web:
     build: .
-    volumes:
-      - ./logs:/app/logs
     container_name: predictgender_api_container
     ports:
       - "8888:8888"
