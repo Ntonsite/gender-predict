@@ -28,10 +28,10 @@ RUN mkdir -p logs && touch logs/app.log
 RUN pip install --upgrade pip --no-cache-dir -r requirements.txt
 
 # Expose the application port
-EXPOSE 8000
+EXPOSE 8888
 
 # Define environment variable
 ENV PYTHONPATH=/app
 
 # Run app.py when the container launches
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8888"]
